@@ -11,7 +11,7 @@ public class TrajectoryLogger : MonoBehaviour
     void Start()
     {
         // Speichere im Assets-Ordner (du kannst den Pfad ändern)
-        filePath = Application.dataPath + "/trajectory.csv";
+        filePath = Path.Combine(Application.persistentDataPath, "trajectory.csv");
 
         // Schreibe die Header-Zeile
         File.WriteAllText(filePath, "time,x,y,z\n");
